@@ -8,13 +8,15 @@ def is_upper_triangular(matrix):
 
 
 def main():
-    n = int(input().strip())
+    n = int(input("Enter the size of the matrix: "))
     matrix = []
     for i in range(n):
-        matrix.append(list(map(int, input().strip().split())))
+        row = list(map(int, input(
+            "Enter row {} elements (separated by space): ".format(i + 1)).strip().split()))
+        matrix.append(row)
 
     result = is_upper_triangular(matrix)
-    print(1 if result else 0)
+    print("The matrix is upper triangular." if result else "The matrix is not upper triangular.")
 
 
 if __name__ == '__main__':
