@@ -22,3 +22,4 @@ def convert_to_date_format2(date_format1):
         suffix = ["st", "nd", "rd"][int(day) % 10 - 1]
     date_string = day + suffix + " " + month + " " + year
     return DateFormat2(date_string)
+    
